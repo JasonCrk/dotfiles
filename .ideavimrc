@@ -1,0 +1,79 @@
+set number relativenumber
+set idearefactormode=keep
+set ideajoin
+set surround
+set easymotion
+set surround
+set slowmode
+set scrolloff=5
+set incsearch
+
+" search
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set infercase
+set wildignorecase
+
+" ident
+set breakindent
+set autoindent
+set smartindent
+
+" tab
+set expandtab
+set smarttab
+
+set clipboard+=unnamed
+set clipboard+=ideaput
+set virtualedit=onemore
+
+let mapleader = "s"
+
+noremap <Esc> <nop>
+
+nmap <S-Enter> O<Esc>
+nmap <R> o<Esc>
+imap jk <Esc>
+nmap <Space>l <Esc>$
+nmap <Space>h <Esc>_
+map <Space>pf <action>(GotoFile)
+map <leader>r <A-Enter>
+
+nnoremap <C-j> :m +1<CR>
+nnoremap <C-k> :m -2<CR>
+inoremap <C-j> <Esc>:m +1<CR>gi
+inoremap <C-k> <Esc>:m -2<CR>gi
+
+" system clipboard
+vmap <leader>y "+y
+vmap <leader>d "+d
+nmap <leader>y "+yy
+nmap <leader>p "+p
+nmap <leader>P "+P
+vmap <leader>p "+p
+vmap <leader>P "+P
+
+" scrolling
+nmap <leader>d <C-d>
+nmap <leader>u <C-u>
+vmap <leader>d <C-d>
+vmap <leader>u <C-u>
+
+" actions
+nmap <leader>h <action>(PreviousTab)
+nmap <leader>l <action>(NextTab)
+nmap <Space>q <action>(CloseEditor)
+nmap <leader>i <action>(Generate)
+nmap <leader>m <action>(Git.Menu)
+nmap <leader>s <action>(QuickChangeScheme)
+nmap <leader>/ <action>(ShowErrorDescription)
+nmap <leader>e <action>(GotoNextError)
+nmap <Space>vrn <action>(RenameElement)
+nmap gf <action>(RenameFile)
+nnoremap <leader><leader> <C-Tab>
+
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
